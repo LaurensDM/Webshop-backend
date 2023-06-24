@@ -1,0 +1,27 @@
+{
+  "env": {
+    "es6": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": "airbnb",
+  "plugins": ["import"],
+  "rules": {
+    "max-len": ["error", { "code": 1200 }],
+    "no-plusplus": "off",
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "no-await-in-loop": "off",
+    "no-inner-declarations": "off",
+    "no-shadow": "warn",
+    // don't throw Assignment to function parameter
+    //      I don't understand param-reassign -> so I disabled it (bad idea!?)
+    "no-param-reassign": 1,
+    "no-unused-vars": "warn",
+    // don't throw linting error on last empty line missing
+    "eol-last": ["warn", "never"],
+    "quotes": "off",
+    "linebreak-style": 0,
+    "indent": 0
+  }
+}
